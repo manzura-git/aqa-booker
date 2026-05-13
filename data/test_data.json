@@ -1,0 +1,46 @@
+{
+    "valid_credentials": {
+        "username": "admin",
+        "password": "password123"
+    },
+    "invalid_credentials": {
+        "username": "admin",
+        "password": "wrongpass"
+    },
+    "fake_user_credentials": {
+        "username": "fakeuser",
+        "password": "password123"
+    },
+    "valid_booking": {
+        "firstname": "Jim",
+        "lastname": "Brown",
+        "totalprice": 111,
+        "depositpaid": true,
+        "bookingdates": {
+            "checkin": "2026-01-01",
+            "checkout": "2026-01-10"
+        },
+        "additionalneeds": "Breakfast"
+    },
+    "minimal_booking": {
+        "firstname": "Jane",
+        "lastname": "Doe",
+        "totalprice": 50,
+        "depositpaid": false,
+        "bookingdates": {
+            "checkin": "2026-02-01",
+            "checkout": "2026-02-05"
+        }
+    },
+    "updated_booking": {
+        "firstname": "John",
+        "lastname": "Smith",
+        "totalprice": 250,
+        "depositpaid": false,
+        "bookingdates": {
+            "checkin": "2026-03-01",
+            "checkout": "2026-03-07"
+        },
+        "additionalneeds": "Lunch"
+    }
+}

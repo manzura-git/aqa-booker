@@ -25,6 +25,7 @@ def booking_client():
 @pytest.fixture(scope="session")
 def auth_token(auth_client, test_data):
     creds = test_data["valid_credentials"]
+    auth_client.create_token(creds["username"], creds["password"], expected_status=200)
     response = auth_client.create_token(creds["username"], creds["password"])
     assert response.status_code == 200
     token = response.json()["token"]
@@ -34,6 +35,8 @@ def auth_token(auth_client, test_data):
 
 @pytest.fixture
 def created_booking(booking_client, test_data, auth_token):
+    booking_client.create_booking(test_data["valid_booking"], expected_status=200)
+    data = booking_client.json
     response = booking_client.create_booking(test_data["valid_booking"])
     assert response.status_code == 200
     data = response.json()

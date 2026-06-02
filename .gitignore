@@ -2,8 +2,9 @@
 __pycache__/
 .pytest_cache/
 allure-results/
-allure_report
 logs/
 .idea/
 *.pyc
 .DS_Store
+pytest.ini
+allure-report/
